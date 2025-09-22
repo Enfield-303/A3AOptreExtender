@@ -12,8 +12,7 @@ class Templates {
         side = "Inv"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
         flagTexture = "A3\Data_F\Flags\Flag_CSAT_CO.paa"; //path to an icon to be displayed in the selector
         name = "A3 UNSC"; //the name shown in the selector
-        file = "Vanilla_AI_CSAT2"; //the template file name
+        file = "Optre_AI_UNSC"; //the template file name
         maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
-        climate[] = {"SPACE"}; //climate that the template is meant for
     };
 };

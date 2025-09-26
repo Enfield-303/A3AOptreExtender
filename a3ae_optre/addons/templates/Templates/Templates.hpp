@@ -15,4 +15,14 @@ class Templates {
         file = "Optre_AI_UNSC"; //the template file name
         maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
     };
+
+    class Optre_VM : Vanilla_Base
+    {
+        basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
+        side = "Reb"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
+        flagTexture = "A3\Data_F\Flags\Flag_CSAT_CO.paa"; //path to an icon to be displayed in the selector
+        name = "A3 Venezian Movement"; //the name shown in the selector
+        file = "Optre_Reb_VM"; //the template file name
+        maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
+    };
 };

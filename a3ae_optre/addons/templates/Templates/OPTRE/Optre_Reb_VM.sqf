@@ -63,7 +63,7 @@
 ///////////////////////////
 
 private _initialRebelEquipment = [
-"OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope",
+"OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope","OPTRE_M6G_Flashlight",
 "optre_hgun_comet_F","4Rnd_454Casull",
 "OPTRE_M319s","OPTRE_signalSmokeP","OPTRE_signalSmokeG","OPTRE_signalSmokeR","OPTRE_signalSmokeB","OPTRE_signalSmokeY","OPTRE_signalSmokeO",
 "launch_RPG32_F","RPG32_F",

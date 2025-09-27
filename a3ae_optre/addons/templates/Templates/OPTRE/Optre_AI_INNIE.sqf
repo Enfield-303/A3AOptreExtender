@@ -47,7 +47,7 @@
 ["vehiclesAPCs", ["OPTRE_M412_IFV_INS"]] call _fnc_saveToTemplate;                  // armed with enclosed turret, armoured, with 6-8 passengers
 ["vehiclesIFVs", ["OPTRE_M494_INS"]] call _fnc_saveToTemplate;                  // capable of surviving multiple rockets, cannon armed, with 6-8 passengers
 ["vehiclesLightTanks", ["OPTRE_M413_MGS_INS"]] call _fnc_saveToTemplate;
-["vehiclesTanks", ["OPTRE_M808B_INS","O_MBT_02_railgun_F"]] call _fnc_saveToTemplate;
+["vehiclesTanks", ["OPTRE_M808B_INS","a3ae_optre_Futura"]] call _fnc_saveToTemplate;
 ["vehiclesAA", ["OPTRE_M12R_AA_ins"]] call _fnc_saveToTemplate;                    // ideally heavily armed with anti-ground capability and enclosed turret. Passengers will be ignored
 
 
@@ -89,22 +89,15 @@
 
 //Minefield definition
 //CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
-["minefieldAT", []] call _fnc_saveToTemplate;
-["minefieldAPERS", []] call _fnc_saveToTemplate;
+["minefieldAT", ["ATMine"]] call _fnc_saveToTemplate;
+["minefieldAPERS", ["APERSMine"]] call _fnc_saveToTemplate;
 
 /////////////////////
 ///  Identities   ///
 /////////////////////
-//Faces and Voices given to AI Factions.
-["faces", []] call _fnc_saveToTemplate;
-["voices", []] call _fnc_saveToTemplate;
-//SpecialForces, Militia, Police Faces and Voices, these are Optional if there is no reason to Include them, leave them out.
-["sfVoices", []] call _fnc_saveToTemplate;
-["sfFaces", []] call _fnc_saveToTemplate;
-["milVoices", []] call _fnc_saveToTemplate;
-["milFaces", []] call _fnc_saveToTemplate;
-["polVoices", []] call _fnc_saveToTemplate;
-["polFaces", []] call _fnc_saveToTemplate;
+["faces", ["LivonianHead_1","LivonianHead_10","LivonianHead_2","LivonianHead_3","LivonianHead_4","LivonianHead_6","LivonianHead_9","Sturrock","WhiteHead_01","WhiteHead_02","WhiteHead_03","WhiteHead_04","WhiteHead_05","WhiteHead_06","WhiteHead_07","WhiteHead_08","WhiteHead_09","WhiteHead_10","WhiteHead_11","WhiteHead_13","WhiteHead_14","WhiteHead_15","WhiteHead_17","WhiteHead_18","WhiteHead_20","WhiteHead_21","WhiteHead_30"]] call _fnc_saveToTemplate;
+["voices", ["Male01pol","Male02pol","Male03pol"]] call _fnc_saveToTemplate;
+"EnochMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //

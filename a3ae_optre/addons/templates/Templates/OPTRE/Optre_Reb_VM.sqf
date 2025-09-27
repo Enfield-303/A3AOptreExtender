@@ -66,7 +66,7 @@ private _initialRebelEquipment = [
 "OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope","OPTRE_M6G_Flashlight",
 "optre_hgun_comet_F","4Rnd_454Casull",
 "OPTRE_M319s","OPTRE_signalSmokeP","OPTRE_signalSmokeG","OPTRE_signalSmokeR","OPTRE_signalSmokeB","OPTRE_signalSmokeY","OPTRE_signalSmokeO",
-"launch_RPG32_F","RPG32_F",
+"a3ae_optre_MAMRAM","a3ae_optre_MAMRAM_HEDP",
 "launch_NLAW_F",
 "OPTRE_h_PatrolCap_Green", "OPTRE_h_PatrolCap_Brown", "OPTRE_UNSC_Dress_Hat", "OPTRE_CMA_Beret", "OPTRE_h_Booniehat_Grey", "H_MilCap_blue", "H_PASGT_basic_blue_press_F", "H_PASGT_basic_blue_F",
 "V_Press_F","V_BandollierB_oli","V_BandollierB_khk","V_BandollierB_rgr","V_BandollierB_cbr","V_BandollierB_blk","V_Rangemaster_belt",

@@ -47,3 +47,18 @@ class Example_A3_Soft_F_Quadbike_01_Quadbike_01_F_p3d : TRIPLES(ADDON,Nodes,Base
         };
     };
 };
+
+class OPTRE_DME_M12_FAV : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-1.1,-0.7};
+        };
+        class Node2
+        {
+            offset[] = {0,-1.9,-0.7};
+        };
+    };
+};

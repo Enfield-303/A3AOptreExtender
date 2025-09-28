@@ -19,12 +19,13 @@ class CfgPatches
     };
 };
 
+
 class CfgMagazines
 {
     class RPG32_F;
     class a3ae_optre_MAMRAM_HEDP : RPG32_F
     {
-        descriptionshort = "High-Explosive-Dual-Purpose"
+        descriptionshort = "High-Explosive-Dual-Purpose";
         displayname = "MRAM-HEDP";
         displaynameshort = "HEDP";
     }
@@ -32,7 +33,7 @@ class CfgMagazines
     class RPG32_HE_F;
     class a3ae_optre_MAMRAM_Therm : RPG32_HE_F
     {
-        descriptionshort = "High-Explosive-Thermobaric"
+        descriptionshort = "High-Explosive-Thermobaric";
         displayname = "MRAM-HETB";
         displaynameshort = "Thermobaric";
     }

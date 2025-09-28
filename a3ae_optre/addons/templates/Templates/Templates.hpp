@@ -38,8 +38,18 @@ class Templates {
         name = "A3 Insurrection"; //the name shown in the selector
         file = "Optre_AI_INNIE"; //the template file name
         maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
-        description = "Insurrectionist Forces"
+        description = "Insurrectionist Forces";
     };
 
+    class Optre_Civ: OPTRE_Base
+    {
+        basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
+        side = "Civ"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
+        flagTexture = "A3\Data_F\Flags\Flag_CSAT_CO.paa"; //path to an icon to be displayed in the selector
+        name = "A3 Colonists"; //the name shown in the selector
+        file = "Optre_Civ_Colonial"; //the template file name
+        maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
+        description = "Colonial Civilians";
+    };
 
 };

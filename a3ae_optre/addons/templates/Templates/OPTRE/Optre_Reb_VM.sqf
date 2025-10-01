@@ -2,6 +2,8 @@
 //   Rebel Information   //
 ///////////////////////////
 
+#include "Optre_Reb_Vehicle_attributes.sqf"
+
 ["name", "Venezian Movement"] call _fnc_saveToTemplate;                         //this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
 
 ["flag", "Flag_CSAT_F"] call _fnc_saveToTemplate;                         //this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
@@ -56,7 +58,7 @@
 ["breachingExplosivesAPC", []] call _fnc_saveToTemplate;            //this line determines explosives needed for breaching APCs -- Example: ["breachingExplosivesAPC", [["DemoCharge_Remote_Mag", 1]]] -- Array, can use Multiple
 ["breachingExplosivesTank", []] call _fnc_saveToTemplate;           //this line determines explosives needed for breaching Tanks -- Example: [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] -- Array, can use Multiple
 
-#include "Optre_Reb_Vehicle_attributes.sqf"
+
 
 ///////////////////////////
 //  Rebel Starting Gear  //

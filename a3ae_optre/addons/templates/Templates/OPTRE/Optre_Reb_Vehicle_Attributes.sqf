@@ -4,7 +4,7 @@
     ["OPTRE_M12_CIV_IND", ["rebCost", 100]], //6 Cargo, 4 Seats, 127 speed
     ["OPTRE_Genet_IND", ["rebCost", 50]], //1 Cargo, 2 Seats, 151 speed    
     ["OPTRE_M12_CIV2_IND", ["rebCost", 100]], //1 Cargo, 2 Seats, 127 speed | better acceleration??   
-    ["OPTRE_forklift_IND", ["rebCost", 10], //1 Cargo, 1 Seats, 30 speed    
+    ["OPTRE_forklift_IND", ["rebCost", 10]], //1 Cargo, 1 Seats, 30 speed    
     ["OPTRE_RCHog", ["rebCost", 5]],//5 Cargo, 0 Seats, come on this thing is funny    
 
 
@@ -22,4 +22,4 @@
     //Mortar
     ["OPTRE_AU_44_INS_Mortar", ["rebCost", 850]] //122mm mortar
 
-]]] call _fnc_saveToTemplate;
+]] call _fnc_saveToTemplate;

@@ -59,3 +59,37 @@ class CfgWeapons
         magazines[] = {"a3ae_optre_MAMRAM_HEDP","a3ae_optre_MAMRAM_Therm"};
     };
 };
+
+class A3A {
+    class Loadouts
+    {
+        class CASPlane
+        {
+            class baseCAS;
+            class OPTRE_YSS_1000_A : baseCAS {
+                loadout[] = {"OPTRE_32Rnd_Anvil1_missiles","OPTRE_4Rnd_Scorpion_missiles","OPTRE_32Rnd_Anvil1_missiles","OPTRE_4Rnd_Scorpion_missiles","OPTRE_M1024_2000Rnd_30mm"};
+                mainGun[] = {"OPTRE_M1024_ASWAC_30mm_MLA"};
+                rocketLauncher[] = {"OPTRE_missiles_Anvil1"};
+                missileLauncher[] = {"OPTRE_missiles_Scorpion"};
+            };
+            class OPTRE_UNSC_hornet_ins : baseCAS {
+                loadout[] = {"OPTRE_16Rnd_Anvil1_missiles","OPTRE_8Rnd_C2GMLS_missiles"};
+                mainGun[] = {"OPTRE_GUA23A"};
+                rocketLauncher[] = {"OPTRE_missiles_Anvil1"};
+                missileLauncher[] = {"OPTRE_missiles_C2GMLS"};
+            };            
+        };
+        class CAPPlane
+        {
+            class baseCAP;
+            class OPTRE_YSS_1000_A : baseCAP {
+                loadout[] = {"OPTRE_STMedusa_6Rnd_AA_Missile","OPTRE_STMedusa_6Rnd_AA_Missile","OPTRE_STMedusa_6Rnd_AA_Missile","OPTRE_STMedusa_6Rnd_AA_Missile","OPTRE_M1024_2000Rnd_30mm"};
+            };
+            class OPTRE_UNSC_hornet_ins : baseCAP {
+                loadout[] = {"OPTRE_8Rnd_C2GMLS_missiles","OPTRE_8Rnd_C2GMLS_missiles"};
+            };
+            class OPTRE_UNSC_hornet_CAP : OPTRE_UNSC_hornet_ins {
+            };            
+        };
+    };
+};

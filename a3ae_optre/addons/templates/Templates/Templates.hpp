@@ -27,7 +27,7 @@ class Templates {
         name = "A3 VM"; //the name shown in the selector
         file = "Optre_Reb_VM"; //the template file name
         maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
-        description = "Venezian movement";
+        description = "Venezian Movement";
     };
 
     class Optre_INNIE: OPTRE_Base

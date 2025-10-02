@@ -52,8 +52,8 @@
 ["vehiclesPlane", []] call _fnc_saveToTemplate;
 ["vehiclesMedical", []] call _fnc_saveToTemplate;
 
-["mineAT", ""] call _fnc_saveToTemplate;                 //this line determines AT mines needed for spawning in minefields -- Example: ["minefieldAT", ["ATMine_Range_Mag"]] -- String, can only use one
-["mineAPERS", ""] call _fnc_saveToTemplate;             //this line determines APERS mines needed for spawning in minefields -- Example: ["minefieldAPERS", ["APERSMine_Range_Mag"]] -- String, can only use one
+["mineAT", "ATMine"] call _fnc_saveToTemplate;                 //this line determines AT mines needed for spawning in minefields -- Example: ["minefieldAT", ["ATMine_Range_Mag"]] -- String, can only use one
+["mineAPERS", "APERSMine"] call _fnc_saveToTemplate;             //this line determines APERS mines needed for spawning in minefields -- Example: ["minefieldAPERS", ["APERSMine_Range_Mag"]] -- String, can only use one
 
 ["breachingExplosivesAPC", []] call _fnc_saveToTemplate;            //this line determines explosives needed for breaching APCs -- Example: ["breachingExplosivesAPC", [["DemoCharge_Remote_Mag", 1]]] -- Array, can use Multiple
 ["breachingExplosivesTank", []] call _fnc_saveToTemplate;           //this line determines explosives needed for breaching Tanks -- Example: [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] -- Array, can use Multiple

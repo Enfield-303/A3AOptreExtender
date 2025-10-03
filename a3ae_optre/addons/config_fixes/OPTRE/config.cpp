@@ -19,7 +19,6 @@ class CfgPatches
     };
 };
 
-
 class CfgMagazines
 {
     class RPG32_F;

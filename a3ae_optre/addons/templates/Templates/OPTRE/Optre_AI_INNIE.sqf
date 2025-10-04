@@ -5,9 +5,9 @@
 ["name", "Insurrectionist"] call _fnc_saveToTemplate;
 ["spawnMarkerName", "Innie Support Corridor"] call _fnc_saveToTemplate;
 
-["flag", ""] call _fnc_saveToTemplate;
-["flagTexture", ""] call _fnc_saveToTemplate;
-["flagMarkerType", ""] call _fnc_saveToTemplate;
+["flag", "Flag_NATO_F"] call _fnc_saveToTemplate;
+["flagTexture", "x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_insurrection_ca.paa"] call _fnc_saveToTemplate;
+["flagMarkerType", "A3AE_OPTRE_INNIE"] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Vehicles       //
@@ -288,7 +288,7 @@ _sfloadoutData set ["mgHelmets", ["OPTRE_Ins_BJ_Helmet_Wdl","OPTRE_Ins_BJ_Helmet
 _sfloadoutData set ["medHelmets", ["OPTRE_Ins_BJ_Helmet_Wdl","OPTRE_Ins_BJ_Helmet"]];
 _sfloadoutData set ["slHat", ["OPTRE_Ins_BJ_Helmet_Wdl"]];
 _sfloadoutData set ["slFacewear", ["OPTRE_Glasses_Visor_Blue","OPTRE_Glasses_Cigar","OPTRE_Glasses_Cigarette"]];
-_sfloadoutData set ["facewear", [,"OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_HUD_w_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_p_Glasses","OPTRE_HUD_Glasses","OPTRE_HUD_g_Glasses","OPTRE_HUD_b_Glasses","OPTRE_HUD_blk_Glasses"]];
+_sfloadoutData set ["facewear", ["OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_HUD_w_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_p_Glasses","OPTRE_HUD_Glasses","OPTRE_HUD_g_Glasses","OPTRE_HUD_b_Glasses","OPTRE_HUD_blk_Glasses"]];
 
 _sfloadoutData set ["slRifles", [ 
 ["OPTRE_M295_BMR", "", "", "OPTRE_BMR_Scope", ["OPTRE_25Rnd_762x51_Mag_Tracer", "OPTRE_25Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_25Rnd_762x51_Mag"], [], ""],

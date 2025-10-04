@@ -2,31 +2,33 @@
 //       Vehicles       //
 //////////////////////////    
 
-["vehiclesCivCar", ["OPTRE_M12_CIV","OPTRE_Genet","OPTRE_M12_CIV2"]] call _fnc_saveToTemplate;             //this line determines civilian cars -- Example: ["vehiclesCivCar", ["C_Offroad_01_F"]] -- Array, can contain multiple assets
+["vehiclesCivCar", [
+"OPTRE_M12_CIV", 1.0,
+"OPTRE_Genet", 0.5,
+"OPTRE_M12_CIV2", 10]] call _fnc_saveToTemplate;             //this line determines civilian cars -- Example: ["vehiclesCivCar", ["C_Offroad_01_F"]] -- Array, can contain multiple assets
 
-["vehiclesCivIndustrial", ["C_Truck_02_transport_F"]] call _fnc_saveToTemplate;             //this line determines civilian trucks -- Example: ["vehiclesCivIndustrial", ["C_Truck_02_transport_F"]] -- Array, can contain multiple assets
+["vehiclesCivIndustrial", ["C_Truck_02_transport_F",1.0]] call _fnc_saveToTemplate;             //this line determines civilian trucks -- Example: ["vehiclesCivIndustrial", ["C_Truck_02_transport_F"]] -- Array, can contain multiple assets
 
 ["vehiclesCivHeli", []] call _fnc_saveToTemplate;             //this line determines civilian helis -- Example: ["vehiclesCivHeli", ["C_Heli_Light_01_civil_F"]] -- Array, can contain multiple assets
 
 ["vehiclesCivBoat", [
-    "C_Boat_Civil_01_rescue_F",        // motorboats
-    "C_Boat_Civil_01_police_F", 
-    "C_Boat_Civil_01_F",
-    "C_Rubberboat",                    // rescue boat
-    "C_Boat_Transport_02_F",           // RHIB
-    "C_Scooter_Transport_01_F",
-    "C_Boat_Civil_02_F"]] call _fnc_saveToTemplate;             //this line determines civilian boats -- Example: ["vehiclesCivBoat", ["C_Boat_Civil_01_F"]] -- Array, can contain multiple assets
+    "C_Boat_Civil_01_rescue_F",0.6,        // motorboats
+    "C_Boat_Civil_01_police_F",0.3, 
+    "C_Boat_Civil_01_F",1,
+    "C_Rubberboat",1,                    // rescue boat
+    "C_Boat_Transport_02_F",1,           // RHIB
+    "C_Scooter_Transport_01_F",1]] call _fnc_saveToTemplate;             //this line determines civilian boats -- Example: ["vehiclesCivBoat", ["C_Boat_Civil_01_F"]] -- Array, can contain multiple assets
 
-["vehiclesCivRepair", [[
-    "C_Offroad_01_repair_F",
-    "C_Van_02_service_F",              // orange
-    "C_Truck_02_box_F"]] call _fnc_saveToTemplate;            //this line determines civilian repair vehicles
-]
-["vehiclesCivMedical", ["C_Van_02_medevac_F"]] call _fnc_saveToTemplate;        //this line determines civilian medic vehicles
+["vehiclesCivRepair", [
+    "C_Offroad_01_repair_F",0.4,
+    "C_Van_02_service_F",0.6,             // orange
+    "C_Truck_02_box_F",1]] call _fnc_saveToTemplate;            //this line determines civilian repair vehicles
+
+["vehiclesCivMedical", ["C_Van_02_medevac_F",0.5]] call _fnc_saveToTemplate;        //this line determines civilian medic vehicles
 
 ["vehiclesCivFuel", [
-"C_Van_01_fuel_F",
-"C_Truck_02_fuel_F"]] call _fnc_saveToTemplate;            //this line determines civilian fuel vehicles
+"C_Van_01_fuel_F",0.3,
+"C_Truck_02_fuel_F",0.3]] call _fnc_saveToTemplate;            //this line determines civilian fuel vehicles
 
 /////////////////////
 ///  Identities   ///
@@ -74,27 +76,12 @@ private _civUniforms = [
     "U_C_Scientist",
     "U_C_Uniform_Scientist_02_formal_F",
     "U_C_Uniform_Scientist_02_F",
-    "U_C_Uniform_Scientist_01_F",
-    "U_C_Poor_2",   // This and below be Aegis
-    "U_Jayholder",
-    "U_C_Man_casual_7_F",
-    "U_C_Man_casual_8_F",
-    "U_C_Man_casual_9_F",
-    "U_C_PriestBody",
-    "U_C_Commoner1_1",
-    "U_C_Commoner1_2",
-    "U_C_Commoner1_3",
-    "U_C_Uniform_Formal_01_blue_F",
-    "U_C_Uniform_Formal_01_striped_F",
-    "U_C_Uniform_Formal_01_white_F"
+    "U_C_Uniform_Scientist_01_F"
 ];
 
 private _pressUniforms = [
     "U_C_Journalist",
-    "U_Marshal",
-    "U_C_Uniform_Formal_01_blue_F",
-    "U_C_Uniform_Formal_01_striped_F",
-    "U_C_Uniform_Formal_01_white_F"
+    "U_Marshal"
     ];
 
 private _workerUniforms = [

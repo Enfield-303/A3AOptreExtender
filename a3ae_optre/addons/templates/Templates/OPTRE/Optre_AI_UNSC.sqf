@@ -6,8 +6,8 @@
 ["spawnMarkerName", "UNSC Support Corridor"] call _fnc_saveToTemplate; 			//this line determines the name tag for the "carrier" on the map -- Example: ["spawnMarkerName", "NATO support corridor"] - ENTER ONLY ONE OPTION
 
 ["flag", "Flag_NATO_F"] call _fnc_saveToTemplate; 						//this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
-["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] call _fnc_saveToTemplate; 				//this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
-["flagMarkerType", "flag_NATO"] call _fnc_saveToTemplate; 			//this line determines the flag marker type -- Example: ["flagMarkerType", "flag_NATO"] - ENTER ONLY ONE OPTION
+["flagTexture", "x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_unsc_ca.paa"] call _fnc_saveToTemplate; 				//this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
+["flagMarkerType", "A3AE_OPTRE_UNSC"] call _fnc_saveToTemplate; 			//this line determines the flag marker type -- Example: ["flagMarkerType", "flag_NATO"] - ENTER ONLY ONE OPTION
 
 //////////////////////////
 //       Vehicles       //
@@ -253,56 +253,56 @@ _militaryloadoutData set ["slRifles", [
 ["OPTRE_MA5B", "", "", "OPTRE_MA5_SmartLink", ["OPTRE_60Rnd_762x51_Mag_Tracer", "OPTRE_60Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_60Rnd_762x51_Mag"], [], ""]]]
 ;
 
-_militarylloadoutData set ["rifles", [
+_militaryloadoutData set ["rifles", [
 ["OPTRE_MA5A", "", "", "", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag_Tracer"], [], ""],
 ["OPTRE_M26_F", "", "", "optic_Aco", ["OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag"], [], ""],
 ["OPTRE_BR45", "", "", "Optre_Recon_Sight_Red", ["OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag"], [], ""]]]; 					//this line determines rifles -- Example: ["arifle_MX_F", "arifle_MX_pointer_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["carbines", [["OPTRE_M6DS_Carbine_Foregrip_F", "", "", "OPTRE_M7_Sight", ["OPTRE_26Rnd_127x40_Mag_Tracer", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""]]]; 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["carbines", [["OPTRE_M6DS_Carbine_Foregrip_F", "", "", "OPTRE_M7_Sight", ["OPTRE_26Rnd_127x40_Mag_Tracer", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""]]]; 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
 
-_militarylLoadoutData set ["Shotguns", [
+_militaryloadoutData set ["Shotguns", [
 ["OPTRE_CQS48_Bulldog_Automatic_Green", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""],
 ["OPTRE_M45TAC", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_6Rnd_8Gauge_HEDP"], [], ""]]];
 
-_militarylloadoutData set ["grenadeLaunchers", [ 
+_militaryloadoutData set ["grenadeLaunchers", [ 
 ["OPTRE_MA37GL", "", "", "", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag_Tracer"], ["1Rnd_HE_Grenade_shell", "OPTRE_1Rnd_SmokeOrange_Grenade_shell", "OPTRE_1Rnd_SmokePurple_Grenade_shell", "OPTRE_1Rnd_Smoke_Grenade_shell"], ""], 
 ["OPTRE_BR45GL", "", "", "", ["OPTRE_36Rnd_95x40_Mag", "OPTRE_36Rnd_95x40_Mag_Tracer_Yellow", "OPTRE_36Rnd_95x40_Mag_Tracer"], ["3Rnd_HE_Grenade_shell", "OPTRE_1Rnd_SmokeOrange_Grenade_shell", "OPTRE_1Rnd_SmokePurple_Grenade_shell", "OPTRE_1Rnd_Smoke_Grenade_shell"], ""]]]
 ; 			//this line determines grenade launchers -- Example: ["arifle_MX_GL_ACO_F", "arifle_MX_GL_ACO_pointer_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["SMGs", [ ["OPTRE_M7", "", "", "", ["OPTRE_60Rnd_5x23mm_Mag", "OPTRE_60Rnd_5x23mm_Mag_tracer_yellow", "OPTRE_60Rnd_5x23mm_Mag_tracer"], [], ""]]]; 						//this line determines SMGs -- Example: ["SMG_01_F", "SMG_01_Holo_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["SMGs", [ ["OPTRE_M7", "", "", "", ["OPTRE_60Rnd_5x23mm_Mag", "OPTRE_60Rnd_5x23mm_Mag_tracer_yellow", "OPTRE_60Rnd_5x23mm_Mag_tracer"], [], ""]]]; 						//this line determines SMGs -- Example: ["SMG_01_F", "SMG_01_Holo_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["machineGuns", [
+_militaryloadoutData set ["machineGuns", [
 ["OPTRE_M73", "", "", "OPTRE_M73_SmartLink",["OPTRE_200Rnd_95x40_Box_Tracer", "OPTRE_200Rnd_95x40_Box_Tracer_Yellow", "OPTRE_200Rnd_95x40_Box"], [], "bipod_01_F_blk"], 
 ["OPTRE_M247A1_UNSC_AI", "", "", "OPTRE_BMR_Scope", ["OPTRE_200Rnd_762x51_M118_M247A1_Box", "", ""], [], "bipod_01_F_blk"],
 ["OPTRE_M250_UNSC_AI", "", "", "OPTRE_BMR_Scope", ["OPTRE_50Rnd_127x99_M250_Box", "", ""], [], "bipod_01_F_blk"]]]
 ; 				//this line determines machine guns -- Example: ["arifle_MX_SW_F", "arifle_MX_SW_Hamr_pointer_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["marksmanRifles", [
+_militaryloadoutData set ["marksmanRifles", [
 ["OPTRE_M392_DMR", "", "", "OPTRE_M392_Scope", ["OPTRE_15Rnd_762x51_Mag", "OPTRE_15Rnd_762x51_Mag_Tracer", "OPTRE_15Rnd_762x51_Mag_Tracer_Yellow"], [], ""],
 ["OPTRE_BR55HB_ScopedRifle", "", "", "OPTRE_BR55HB_Scope", ["OPTRE_36Rnd_95x40_Mag", "OPTRE_36Rnd_95x40_Mag_Tracer", "OPTRE_36Rnd_95x40_Mag_Tracer_Yellow"], [], ""] ]
 ]; 			//this line determines markman rifles -- Example: ["arifle_MXM_F", "arifle_MXM_Hamr_pointer_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["sniperRifles", [["OPTRE_SRS99C", "", "", "OPTRE_SRS99C_Scope", ["OPTRE_4Rnd_145x114_APFSDS_Mag", "OPTRE_4Rnd_145x114_HVAP_Mag", "OPTRE_4Rnd_145x114_HVAP_Mag"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
-_militarylloadoutData set ["lightATLaunchers", [["launch_NLAW_F"],
+_militaryloadoutData set ["sniperRifles", [["OPTRE_SRS99C", "", "", "OPTRE_SRS99C_Scope", ["OPTRE_4Rnd_145x114_APFSDS_Mag", "OPTRE_4Rnd_145x114_HVAP_Mag", "OPTRE_4Rnd_145x114_HVAP_Mag"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["lightATLaunchers", [["launch_NLAW_F"],
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_HEDP", "a3ae_optre_MAMRAM_Therm"], [], ""], 
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_Therm", "a3ae_optre_MAMRAM_HEDP"], [], ""],
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_HEDP", "a3ae_optre_MAMRAM_HEDP"], [], ""]]];		//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
 
 
-_militarylloadoutData set ["ATLaunchers",[ ["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HE", "OPTRE_M41_Twin_Smoke_P"], [], ""]]]; 				//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
-_militarylloadoutData set ["missileATLaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G", "OPTRE_M41_Twin_HEAP", "OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAP"], [], ""]]]; 		//this line determines missile AT launchers -- Example: ["launch_B_Titan_short_F"] -- Array, can contain multiple assets
-_militarylloadoutData set ["AALaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G_AA", "OPTRE_M41_Twin_HEAT_G_AA"], [], ""]]]; 				//this line determines AA lokaunchers -- Example: ["launch_B_Titan_F"] -- Array, can contain multiple assets
-_militarylloadoutData set ["sidearms",[ ["OPTRE_M6G", "", "", "OPTRE_M6G_Scope", [ "OPTRE_8Rnd_127x40_Mag_Tracer", "OPTRE_8Rnd_127x40_AP_Mag", "OPTRE_8Rnd_127x40_Mag"], [], ""]]]; 					//this line determines handguns/sidearms -- Example: ["hgun_Pistol_heavy_01_F", "hgun_P07_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["ATLaunchers",[ ["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HE", "OPTRE_M41_Twin_Smoke_P"], [], ""]]]; 				//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["missileATLaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G", "OPTRE_M41_Twin_HEAP", "OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAP"], [], ""]]]; 		//this line determines missile AT launchers -- Example: ["launch_B_Titan_short_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["AALaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G_AA", "OPTRE_M41_Twin_HEAT_G_AA"], [], ""]]]; 				//this line determines AA lokaunchers -- Example: ["launch_B_Titan_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["sidearms",[ ["OPTRE_M6G", "", "", "OPTRE_M6G_Scope", [ "OPTRE_8Rnd_127x40_Mag_Tracer", "OPTRE_8Rnd_127x40_AP_Mag", "OPTRE_8Rnd_127x40_Mag"], [], ""]]]; 					//this line determines handguns/sidearms -- Example: ["hgun_Pistol_heavy_01_F", "hgun_P07_F"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["ATMines", ["ATMine_Range_Mag"]]; 					//this line determines the AT mines which can be carried by units -- Example: ["ATMine_Range_Mag"] -- Array, can contain multiple assets
-_militarylloadoutData set ["APMines", ["APERSMine_Range_Mag"]]; 					//this line determines the APERS mines which can be carried by units -- Example: ["APERSMine_Range_Mag"] -- Array, can contain multiple assets
-_militarylloadoutData set ["lightExplosives", ["C7_Remote_Mag"]]; 			//this line determines light explosives -- Example: ["DemoCharge_Remote_Mag"] -- Array, can contain multiple assets
-_militarylloadoutData set ["heavyExplosives", ["C12_Remote_Mag","M168_Remote_Mag"]]; 			//this line determines heavy explosives -- Example: ["SatchelCharge_Remote_Mag"] -- Array, can contain multiple assets
+_militaryloadoutData set ["ATMines", ["ATMine_Range_Mag"]]; 					//this line determines the AT mines which can be carried by units -- Example: ["ATMine_Range_Mag"] -- Array, can contain multiple assets
+_militaryloadoutData set ["APMines", ["APERSMine_Range_Mag"]]; 					//this line determines the APERS mines which can be carried by units -- Example: ["APERSMine_Range_Mag"] -- Array, can contain multiple assets
+_militaryloadoutData set ["lightExplosives", ["C7_Remote_Mag"]]; 			//this line determines light explosives -- Example: ["DemoCharge_Remote_Mag"] -- Array, can contain multiple assets
+_militaryloadoutData set ["heavyExplosives", ["C12_Remote_Mag","M168_Remote_Mag"]]; 			//this line determines heavy explosives -- Example: ["SatchelCharge_Remote_Mag"] -- Array, can contain multiple assets
 
-_militarylloadoutData set ["antiInfantryGrenades", ["OPTRE_M9_Frag"]]; 		//this line determines anti infantry grenades (frag and such) -- Example: ["HandGrenade", "MiniGrenade"] -- Array, can contain multiple assets
-_militarylloadoutData set ["antiTankGrenades", ["OPTRE_c7_remote_throwable_sticky_mag"]]; 			//this line determines anti tank grenades. Leave empty when not available. -- Array, can contain multiple assets
-_militarylloadoutData set ["smokeGrenades", ["OPTRE_M2_Smoke"]];
-_militarylloadoutData set ["signalsmokeGrenades", ["OPTRE_M2_Smoke_Red", "OPTRE_M2_Smoke_Purple", "OPTRE_M2_Smoke_Orange", "OPTRE_M2_Smoke_Green", "OPTRE_M2_Smoke_Blue", "OPTRE_ELB47_Strobe","OPTRE_M2_Smoke_Yellow"]];
+_militaryloadoutData set ["antiInfantryGrenades", ["OPTRE_M9_Frag"]]; 		//this line determines anti infantry grenades (frag and such) -- Example: ["HandGrenade", "MiniGrenade"] -- Array, can contain multiple assets
+_militaryloadoutData set ["antiTankGrenades", ["OPTRE_c7_remote_throwable_sticky_mag"]]; 			//this line determines anti tank grenades. Leave empty when not available. -- Array, can contain multiple assets
+_militaryloadoutData set ["smokeGrenades", ["OPTRE_M2_Smoke"]];
+_militaryloadoutData set ["signalsmokeGrenades", ["OPTRE_M2_Smoke_Red", "OPTRE_M2_Smoke_Purple", "OPTRE_M2_Smoke_Orange", "OPTRE_M2_Smoke_Green", "OPTRE_M2_Smoke_Blue", "OPTRE_ELB47_Strobe","OPTRE_M2_Smoke_Yellow"]];
 
 
 ///////////////////////////////////////

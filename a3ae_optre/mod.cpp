@@ -1,5 +1,5 @@
-name = "A3 Antistasi Extender example";
-author = "A3-Antistasi dev team";
-tooltip = "Antistasi Extender example";
+name = "A3 Antistasi OPTRE Extender";
+author = "Enfield (and tiny and ante :3)";
+tooltip = "Antistasi OPTRE Extender";
 actionName = "GitHub";
-action = "https://github.com/HakonRydland/A3AExtender";
+action = "https://github.com/Enfield-303/A3AOptreExtender";

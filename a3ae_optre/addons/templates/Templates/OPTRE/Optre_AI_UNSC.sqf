@@ -27,11 +27,11 @@
 ["vehiclesFuelTrucks", ["OPTRE_m1087_stallion_unsc_refuel"]] call _fnc_saveToTemplate;		//this line determines fuel trucks -- Array, can contain multiple assets
 ["vehiclesMedical", ["OPTRE_m1087_stallion_unsc_medical", "OPTRE_M12_FAV_APC_MED"]] call _fnc_saveToTemplate;			//this line determines medical vehicles -- Array, can contain multiple assets
 ["vehiclesAPCs", ["OPTRE_M411_APC_UNSC"]] call _fnc_saveToTemplate; 				//this line determines APCs -- Example: ["vehiclesAPCs", ["B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_CRV_F"]] -- Array, can contain multiple assets
-["vehiclesTanks", ["OPTRE_M808B_UNSC", "OPTRE_M808BM_UNSC", "OPTRE_M808S"]] call _fnc_saveToTemplate; 			//this line determines tanks -- Example: ["vehiclesTanks", ["B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"]] -- Array, can contain multiple assets
+["vehiclesTanks", ["OPTRE_M808B_UNSC", "OPTRE_M808BM_UNSC", "OPTRE_M808S",""]] call _fnc_saveToTemplate; 			//this line determines tanks -- Example: ["vehiclesTanks", ["B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"]] -- Array, can contain multiple assets
 ["vehiclesAA", ["OPTRE_M808B2", "OPTRE_M808B2A1"]] call _fnc_saveToTemplate; 				//this line determines AA vehicles -- Example: ["vehiclesAA", ["B_APC_Tracked_01_AA_F"]] -- Array, can contain multiple assets
 ["vehiclesLightAPCs", ["OPTRE_M493_APC", "OPTRE_M493_AIE", "OPTRE_M493_AIE_RCWS", "OPTRE_M493_M37"]] call _fnc_saveToTemplate;			//this line determines light APCs
 ["vehiclesIFVs", [ "OPTRE_M412_IFV_UNSC","OPTRE_M494"]] call _fnc_saveToTemplate;				//this line determines IFVs
-["vehiclesLightTanks", ["OPTRE_M413_MGS_UNSC"]] call _fnc_saveToTemplate;
+["vehiclesLightTanks", ["OPTRE_M700_VIPER_UNSC"]] call _fnc_saveToTemplate;
 ["vehiclesHeavyTanks", ["OPTRE_M808L, OPTRE_M850_UNSC"]] call _fnc_saveToTemplate;
 
 
@@ -39,8 +39,8 @@
 ["vehiclesGunBoats", ["optre_catfish_mg_f", "optre_catfish_gauss_f", "optre_catfish_atgm_f", "optre_catfish_aa_f"]] call _fnc_saveToTemplate; 			//this line determines gun boats -- Example: ["vehiclesGunBoats", ["B_Boat_Armed_01_minigun_F"]] -- Array, can contain multiple assets
 ["vehiclesAmphibious", []] call _fnc_saveToTemplate; 		//this line determines amphibious vehicles  -- Example: ["vehiclesAmphibious", ["B_APC_Wheeled_01_cannon_F"]] -- Array, can contain multiple assets
 
-["vehiclesPlanesCAS", ["OPTRE_YSS_1000_A"]] call _fnc_saveToTemplate; 		//this line determines CAS planes -- Example: ["vehiclesPlanesCAS", ["B_Plane_CAS_01_dynamicLoadout_F"]] -- Array, can contain multiple assets
-["vehiclesPlanesAA", ["OPTRE_YSS_1000_A", "OPTRE_UNSC_hornet_CAP"]] call _fnc_saveToTemplate; 			//this line determines air supperiority planes -- Example: ["vehiclesPlanesAA", ["B_Plane_Fighter_01_F"]] -- Array, can contain multiple assets
+["vehiclesPlanesCAS", ["B_Plane_Fighter_01_F"]] call _fnc_saveToTemplate; 		//this line determines CAS planes -- Example: ["vehiclesPlanesCAS", ["B_Plane_CAS_01_dynamicLoadout_F"]] -- Array, can contain multiple assets
+["vehiclesPlanesAA", ["B_Plane_Fighter_01_Stealth_F", "OPTRE_UNSC_hornet_CAP"]] call _fnc_saveToTemplate; 			//this line determines air supperiority planes -- Example: ["vehiclesPlanesAA", ["B_Plane_Fighter_01_F"]] -- Array, can contain multiple assets
 ["vehiclesPlanesTransport", ["OPTRE_Pelican_unarmed"]] call _fnc_saveToTemplate; 	//this line determines transport planes -- Example: ["vehiclesPlanesTransport", ["B_T_VTOL_01_infantry_F"]] -- Array, can contain multiple assets
 ["vehiclesAirPatrol", ["OPTRE_UNSC_falcon_S"]] call _fnc_saveToTemplate;
 
@@ -48,12 +48,9 @@
 ["vehiclesHelisTransport", ["OPTRE_Pelican_unarmed"]] call _fnc_saveToTemplate; 	//this line determines transport helis -- Example: ["vehiclesHelisTransport", ["B_Heli_Transport_01_F"]] -- Array, can contain multiple assets
 
 ["vehiclesHelisAttack", [
-"OPTRE_Pelican_armed_70mm_single_seater", 
 "OPTRE_Pelican_armed", 
 "OPTRE_AV22C_Sparrowhawk", 
-"OPTRE_AV22A_Sparrowhawk", 
-"OPTRE_AV22_Sparrowhawk", 
-"OPTRE_AV22B_Sparrowhawk"]] call _fnc_saveToTemplate; 		//this line determines attack helis -- Example: ["vehiclesHelisAttack", ["B_Heli_Attack_01_F"]] -- Array, can contain multiple assets
+"OPTRE_AV22A_Sparrowhawk"]] call _fnc_saveToTemplate; 		//this line determines attack helis -- Example: ["vehiclesHelisAttack", ["B_Heli_Attack_01_F"]] -- Array, can contain multiple assets
 
 ["vehiclesHelisLightAttack", [
 "OPTRE_UNSC_falcon_armed", 
@@ -70,7 +67,7 @@
 ["uavsPortable", [""]] call _fnc_saveToTemplate; 				//this line determines portable UAVs -- Example: ["uavsPortable", ["B_UAV_01_F"]] -- Array, can contain multiple assets
 
 //Config special vehicles - militia vehicles are mostly used in the early game, police cars are being used by troops around cities -- Example:
-["vehiclesMilitiaLightArmed", ["OPTRE_M12_LRV_DME", "OPTRE_DME_M12_FAV"]] call _fnc_saveToTemplate; //this line determines lightly armed militia vehicles -- Example: ["vehiclesMilitiaLightArmed", ["B_G_Offroad_01_armed_F"]] -- Array, can contain multiple assets
+["vehiclesMilitiaLightArmed", ["OPTRE_M12_LRV_DME", "OPTRE_M12_LRV_PD"]] call _fnc_saveToTemplate; //this line determines lightly armed militia vehicles -- Example: ["vehiclesMilitiaLightArmed", ["B_G_Offroad_01_armed_F"]] -- Array, can contain multiple assets
 ["vehiclesMilitiaTrucks", ["OPTRE_M813_TT_Police"]] call _fnc_saveToTemplate; 	//this line determines militia trucks (unarmed) -- Example: ["vehiclesMilitiaTrucks", ["B_G_Van_01_transport_F"]] -- Array, can contain multiple assets
 ["vehiclesMilitiaCars", ["OPTRE_Genet_Police"]] call _fnc_saveToTemplate; 		//this line determines militia cars (unarmed) -- Example: ["vehiclesMilitiaCars", ["	B_G_Offroad_01_F"]] -- Array, can contain multiple assets
 
@@ -153,7 +150,6 @@ _loadoutData set ["lightATLaunchers", [["launch_NLAW_F"],
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_Therm", "a3ae_optre_MAMRAM_HEDP"], [], ""],
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_HEDP", "a3ae_optre_MAMRAM_HEDP"], [], ""]]];		//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
 
-
 _loadoutData set ["ATLaunchers",[ ["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HE", "OPTRE_M41_Twin_Smoke_P"], [], ""]]]; 				//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
 _loadoutData set ["missileATLaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G", "OPTRE_M41_Twin_HEAP", "OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAP"], [], ""]]]; 		//this line determines missile AT launchers -- Example: ["launch_B_Titan_short_F"] -- Array, can contain multiple assets
 _loadoutData set ["AALaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G_AA", "OPTRE_M41_Twin_HEAT_G_AA"], [], ""]]]; 				//this line determines AA lokaunchers -- Example: ["launch_B_Titan_F"] -- Array, can contain multiple assets
@@ -181,38 +177,34 @@ _loadoutData set ["binoculars", ["OPTRE_Binoculars","OPTRE_Smartfinder"]];
 _loadoutData set ["rangefinders", ["OPTRE_Smartfinder_Vector"]];
 
 _loadoutData set ["uniforms", []];
-_loadoutData set ["slUniforms", []];
 _loadoutData set ["vests", []];
-_loadoutData set ["Hvests", []];
-_loadoutData set ["glVests", []];
 _loadoutData set ["backpacks", []];
 _loadoutData set ["longRangeRadios", []];
 _loadoutData set ["helmets", []];
+_loadoutData set ["facewear", []];
 
 //Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
-_loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
-_loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the standard medical loadout for vanilla
-_loadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the medic medical loadout for vanilla
+_loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
+_loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];
+_loadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies];
 _loadoutData set ["items_miscEssentials", [] call A3A_fnc_itemset_miscEssentials];
 
 //Unit type specific item sets. Add or remove these, depending on the unit types in use.
-_loadoutData set ["items_squadleader_extras", ["ACE_microDAGR", "ACE_DAGR", "Laserbatteries", "Laserbatteries", "Laserbatteries"]];
+_loadoutData set ["items_squadLeader_extras", []];
 _loadoutData set ["items_rifleman_extras", []];
 _loadoutData set ["items_medic_extras", ["OPTRE_MedKit","OPTRE_Biofoam"]];
 _loadoutData set ["items_grenadier_extras", []];
-_loadoutData set ["items_explosivesExpert_extras", ["ToolKit", "MineDetector", "ACE_Clacker","ACE_DefusalKit"]];
+_loadoutData set ["items_explosivesExpert_extras", ["ToolKit", "MineDetector"]];
 _loadoutData set ["items_engineer_extras", ["ToolKit", "MineDetector"]];
 _loadoutData set ["items_lat_extras", []];
 _loadoutData set ["items_at_extras", []];
 _loadoutData set ["items_aa_extras", []];
 _loadoutData set ["items_machineGunner_extras", []];
-_loadoutData set ["items_marksman_extras", ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"]];
-_loadoutData set ["items_sniper_extras", ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"]];
+_loadoutData set ["items_marksman_extras", []];
+_loadoutData set ["items_sniper_extras", []];
 _loadoutData set ["items_police_extras", []];
 _loadoutData set ["items_crew_extras", []];
 _loadoutData set ["items_unarmed_extras", []];
-
-//TODO - ACE overrides for misc essentials, medical and engineer gear
 
 /////////////////////////////////
 //    Military Loadout Data    //
@@ -249,7 +241,7 @@ _militaryloadoutData set ["facewear", ["OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_
 private _loadoutData = call _fnc_createLoadoutData;
 
 _militaryloadoutData set ["slRifles", [
-["OOPTRE_M295_BMR_Woodland", "", "", "OPTRE_BMR_Scope", ["OPTRE_25Rnd_762x51_Mag_Tracer", "OPTRE_25Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_25Rnd_762x51_Mag"], [], ""],
+["OPTRE_M295_BMR_Woodland", "", "", "OPTRE_BMR_Scope", ["OPTRE_25Rnd_762x51_Mag_Tracer", "OPTRE_25Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_25Rnd_762x51_Mag"], [], ""],
 ["OPTRE_MA5B", "", "", "OPTRE_MA5_SmartLink", ["OPTRE_60Rnd_762x51_Mag_Tracer", "OPTRE_60Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_60Rnd_762x51_Mag"], [], ""]]]
 ;
 
@@ -258,7 +250,7 @@ _militaryloadoutData set ["rifles", [
 ["OPTRE_M26_F", "", "", "optic_Aco", ["OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag"], [], ""],
 ["OPTRE_BR45", "", "", "Optre_Recon_Sight_Red", ["OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag"], [], ""]]]; 					//this line determines rifles -- Example: ["arifle_MX_F", "arifle_MX_pointer_F"] -- Array, can contain multiple assets
 
-_militaryloadoutData set ["carbines", [["OPTRE_M6DS_Carbine_Foregrip_F", "", "", "OPTRE_M7_Sight", ["OPTRE_26Rnd_127x40_Mag_Tracer", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""]]]; 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
+_militaryloadoutData set ["carbines", [["OPTRE_M393S_DMR", "", "", "OPTRE_M393_EOTECH", ["OPTRE_15Rnd_762x51_AP_Mag","OPTRE_15Rnd_762x51_AP_Mag_Tracer"], [], ""]]]; 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
 
 _militaryloadoutData set ["Shotguns", [
 ["OPTRE_CQS48_Bulldog_Automatic_Green", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""],
@@ -312,7 +304,7 @@ _militaryloadoutData set ["signalsmokeGrenades", ["OPTRE_M2_Smoke_Red", "OPTRE_M
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 
 _sfloadoutData set ["uniforms", ["OPTRE_UNSC_ODST_Uniform"]];
-_sfloadoutData set ["slUniforms", ["OPTRE_UNSC_ODST_Uniform"]];
+_sfloadoutData set ["slUniforms", ["OPTRE_UNSC_MJOLNIR_Undersuit_Human"]];
 
 _sfloadoutData set ["Vests", ["OPTRE_UNSC_M52D_Armor_Rifleman"]];
 _sfloadoutData set ["glVests", ["OPTRE_UNSC_M52D_Armor_Demolitions"]];
@@ -320,7 +312,7 @@ _sfloadoutData set ["sniVests", ["OPTRE_UNSC_M52D_Armor_Sniper"]];
 _sfloadoutData set ["medVests", ["OPTRE_UNSC_M52D_Armor_Medic","OPTRE_UNSC_M52D_Armor_Rifleman"]];
 _sfloadoutData set ["engVests", ["OPTRE_UNSC_M52D_Armor_Demolitions"]];
 _sfloadoutData set ["mgVests", ["OPTRE_UNSC_M52D_Armor_Rifleman"]];
-_sfloadoutData set ["slVests", ["OPTRE_UNSC_M52D_Armor_Stripes","OPTRE_UNSC_M52D_Armor_Rifleman"]];
+_sfloadoutData set ["slVests", ["OPTRE_MJOLNIR_MkVBArmor_Human"]];
 
 _sfloadoutData set ["backpacks", []];
 _sfloadoutData set ["slBackpacks", ["OPTRE_ILCS_Rucksack_Black"]];
@@ -333,10 +325,9 @@ _sfloadoutData set ["helmets", ["OPTRE_UNSC_CH252D_Helmet"]];
 _sfloadoutData set ["engHelmets", ["OPTRE_UNSC_CH252D_Helmet"]];
 _sfloadoutData set ["mgHelmets", ["OPTRE_UNSC_CH252A_Black_Helmet"]];
 _sfloadoutData set ["medHelmets", ["OPTRE_UNSC_CH252D_Helmet_Stripes"]];
-_sfloadoutData set ["slHat", ["OPTRE_UNSC_Recon_Helmet"]];
+_sfloadoutData set ["slHat", ["OPTRE_UNSC_CQB_Helmet","OPTRE_UNSC_CQC_Helmet","OPTRE_UNSC_EOD_Helmet","OPTRE_UNSC_JFO_Helmet","OPTRE_UNSC_Commando_Helmet","OPTRE_UNSC_Commando_Helmet_Black","OPTRE_UNSC_Security_Helmet","OPTRE_UNSC_Operator_Helmet","OPTRE_UNSC_HRPilot_Helmet","OPTRE_MJOLNIR_MkVBHelmet_Human","OPTRE_UNSC_Scout_Helmet"]];
 _sfloadoutData set ["slFacewear", ["OPTRE_Glasses_Visor_Blue","OPTRE_Glasses_Visor","OPTRE_G_Bandanna_blk"]];
 _sfloadoutData set ["facewear", ["OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_G_Bandanna_blk","OPTRE_HUD_w_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_p_Glasses","OPTRE_HUD_Glasses","OPTRE_HUD_g_Glasses","OPTRE_HUD_b_Glasses","OPTRE_HUD_blk_Glasses"]];
-
 
 _sfloadoutData set ["NVGs", ["OPTRE_NVG_UL"]];	
 _sfloadoutData set ["slNVGs", ["OPTRE_NVG_UAB_UL_CNM"]];						//this line determines NVGs -- Array, can contain multiple assets
@@ -347,12 +338,10 @@ _sfloadoutData set ["SniperNVGs", ["OPTRE_NVG_MVI_UL_CNM"]];
 _sfloadoutData set ["binoculars", ["OPTRE_Binoculars","OPTRE_Smartfinder"]];
 _sfloadoutData set ["rangefinders", ["OPTRE_Smartfinder_Vector"]];
 
-
-
 //guns
 
 _sfloadoutData set ["slRifles", [
-["OPTRE_MA5CGL", "", "", "OPTRE_MA5C_SmartLink", ["OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_32Rnd_762x51_Mag"], ["3Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","3Rnd_Smoke_Grenade_shell"], ""],
+["OPTRE_MA5CGL", "", "", "OPTRE_MA5C_SmartLink", ["OPTRE_60Rnd_762x51_Mag_Tracer", "OPTRE_60Rnd_762x51_Mag_Tracer_Yellow","OPTRE_60Rnd_762x51_Mag"], ["3Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","3Rnd_Smoke_Grenade_shell"], ""],
 ["OPTRE_MA5B", "", "", "OPTRE_MA5_SmartLink", ["OPTRE_60Rnd_762x51_Mag_Tracer", "OPTRE_60Rnd_762x51_Mag_Tracer_Yellow","OPTRE_60Rnd_762x51_Mag"], [], ""]]
 ];
 _sfloadoutData set ["rifles", [
@@ -368,12 +357,10 @@ _sfLoadoutData set ["Shotguns", [
 ["OPTRE_M90A", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""],
 ["OPTRE_CQS48_Bulldog_Automatic", "", "OPTRE_M12_Vis_Red_Laser", "", ["OPTRE_12Rnd_12Gauge_Pellets_Tracer", "OPTRE_12Rnd_12Gauge_Pellets"], [], ""]]];
 
-_sfloadoutData set ["grenadeLaunchers", [ ["OPTRE_MA5BGL", "", "", "", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow", "OPTRE_32Rnd_762x51_Mag_Tracer"], ["1Rnd_HE_Grenade_shell", "OPTRE_1Rnd_SmokeOrange_Grenade_shell", "OPTRE_1Rnd_SmokePurple_Grenade_shell", "OPTRE_1Rnd_Smoke_Grenade_shell"], ""] ]]; 			//this line determines grenade launchers -- Example: ["arifle_MX_GL_ACO_F", "arifle_MX_GL_ACO_pointer_F"] -- Array, can contain multiple assets
+_sfloadoutData set ["grenadeLaunchers", [ ["OPTRE_MA5BGL", "", "", "", ["OPTRE_60Rnd_762x51_Mag_Tracer", "OPTRE_60Rnd_762x51_Mag_Tracer_Yellow","OPTRE_60Rnd_762x51_Mag"], ["1Rnd_HE_Grenade_shell", "OPTRE_1Rnd_SmokeOrange_Grenade_shell", "OPTRE_1Rnd_SmokePurple_Grenade_shell", "OPTRE_1Rnd_Smoke_Grenade_shell"], ""] ]]; 			//this line determines grenade launchers -- Example: ["arifle_MX_GL_ACO_F", "arifle_MX_GL_ACO_pointer_F"] -- Array, can contain multiple assets
 
 _sfloadoutData set ["SMGs", [["OPTRE_M7", "OPTRE_M7_silencer", "OPTRE_M7_Vis_Red_Laser", "OPTRE_M7_Sight", ["OPTRE_60Rnd_5x23mm_Mag_tracer", "OPTRE_60Rnd_5x23mm_Mag_tracer_yellow","OPTRE_60Rnd_5x23mm_Mag"], [], ""]]]; 						//this line determines SMGs -- Example: ["SMG_01_F", "SMG_01_Holo_F"] -- Array, can contain multiple assets
 
-//not sure ODSTs need a machinegunner
-//_sfloadoutData set ["machineGuns", [["OPTRE_M7", "OPTRE_M7_silencer", "OPTRE_M7_Vis_Red_Laser", "OPTRE_M7_Sight", ["OPTRE_60Rnd_5x23mm_Mag_tracer", "OPTRE_60Rnd_5x23mm_Mag_tracer_yellow","OPTRE_60Rnd_5x23mm_Mag"], [], ""]]]]; 				//this line determines machine guns -- Example: ["arifle_MX_SW_F", "arifle_MX_SW_Hamr_pointer_F"] -- Array, can contain multiple assets
 _sfloadoutData set ["marksmanRifles", [
 ["OPTRE_M392_DMR", "", "", "OPTRE_M392_Scope", ["OPTRE_15Rnd_762x51_AP_Mag", "OPTRE_15Rnd_762x51_AP_Mag_Tracer","OPTRE_60Rnd_5x23mm_Mag"], [], ""],
 ["OPTRE_M393S_DMR", "OPTRE_M393_Suppressor", "", "OPTRE_M392_Scope", ["OPTRE_15Rnd_762x51_AP_Mag", "OPTRE_15Rnd_762x51_AP_Mag_Tracer","OPTRE_60Rnd_5x23mm_Mag"], [], ""]]]; 			//this line determines markman rifles -- Example: ["arifle_MXM_F", "arifle_MXM_Hamr_pointer_F"] -- Array, can contain multiple assets
@@ -383,9 +370,7 @@ _sfloadoutData set ["sniperRifles", [
 ["OPTRE_SRS99D", "", "", "OPTRE_SRS99_Scope", ["OPTRE_4Rnd_145x114_APFSDS_Mag_D", "OPTRE_4Rnd_145x114_HVAP_Mag_D"], [], ""],
 ["OPTRE_M99A2S3", "", "", "", ["OPTRE_7Rnd_20mm_APFSDS_Mag", "OPTRE_7Rnd_20mm_APFSDS_Mag"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
 
-
 _sfloadoutData set ["sidearms",[["OPTRE_M6C", "OPTRE_M6C_compensator", "OPTRE_M6C_Laser", "OPTRE_M6C_Scope", ["OPTRE_16Rnd_127x40_Black_Mag", "OPTRE_16Rnd_127x40_Mag_Black_Tracer"], [], ""]]]; 					//this line determines handguns/sidearms -- Example: ["hgun_Pistol_heavy_01_F", "hgun_P07_F"] -- Array, can contain multiple assets
-
 
 _sfloadoutData set ["ATLaunchers",[["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HEAT", "OPTRE_M41_Twin_HE", "OPTRE_M41_Twin_Smoke_P"], [], ""]]]; 				//this line determines light AT launchers -- Example: ["launch_NLAW_F"] -- Array, can contain multiple assets
 _sfloadoutData set ["missileATLaunchers", [["OPTRE_M41_SSR", "", "", "", ["OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAT_G", "OPTRE_M41_Twin_HEAP", "OPTRE_M41_Twin_HEAT_SACLOS", "OPTRE_M41_Twin_HEAP"], [], ""],
@@ -408,20 +393,21 @@ _sfloadoutData set ["signalsmokeGrenades", ["OPTRE_M2_Smoke_Red", "OPTRE_M2_Smok
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
-_militiaLoadoutData set ["uniforms", ["OPTRE_CPD_Uniform_Rolled","OPTRE_CPD_Uniform"]];		//this line determines uniforms for military loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["slUniforms", ["OPTRE_CPD_Uniform_Rolled"]];
-_militiaLoadoutData set ["Vests", ["OPTRE_UNSC_M52A_Armor_Soft","OPTRE_UNSC_M52A_Armor_SoftDK"]];
-_militiaLoadoutData set ["glVests", ["OPTRE_UNSC_M52A_Armor4_URB"]];
-_militiaLoadoutData set ["medVests", ["OPTRE_UNSC_M52A_Armor2_URB"]];
-_militiaLoadoutData set ["backpacks", ["OPTRE_UNSC_Rucksack"]];		//this line determines backpacks for military loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["helmets", ["OPTRE_CPD_CH251_DME", "OPTRE_CPD_CH251P"]];
+_militiaLoadoutData set ["uniforms", ["OPTRE_DME_Uniform"]];		//this line determines uniforms for military loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["slUniforms", ["OPTRE_DME_Uniform"]];
+_militiaLoadoutData set ["Vests", ["OPTRE_UNSC_M52A_Armor3_URB","OPTRE_UNSC_M52A_Armor4_URB"]];
+_militiaLoadoutData set ["glVests", ["OPTRE_UNSC_M52A_Armor_Grenadier_URB"]];
+_militiaLoadoutData set ["medVests", ["OPTRE_UNSC_M52A_Armor_Medic_URB"]];
+_militiaLoadoutData set ["Backpacks", ["OPTRE_UNSC_Rucksack"]];		//this line determines backpacks for military loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["Helmets", ["OPTRE_CPD_CH251_DME","OPTRE_CPD_CH251P"]];
 _militiaLoadoutData set ["medHelmets", ["OPTRE_CPD_CH251_White"]];
+_militiaLoadoutData set ["Hats", ["OPTRE_CPD_Cap"]];
 
 _militiaLoadoutData set ["rifles", [
-["OPTRE_MA32", "", "", "Optre_Evo_Sight_Riser", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_32Rnd_762x51_Mag_Tracer"], [], ""],
+["OPTRE_Commando_Black", "", "", "OPTRE_BMR_Scope", ["Commando_20Rnd_65_Mag", "Commando_20Rnd_65_TracerR_Mag","Commando_20Rnd_65_TracerY_Mag"], [], ""],
 ["OPTRE_MA5A", "", "", "", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_32Rnd_762x51_Mag_Tracer"], [], ""]]];			//this line determines rifles -- Example: ["arifle_MX_F", "arifle_MX_pointer_F"] -- Array, can contain multiple assets
 
-_militiaLoadoutData set ["carbines", [["OPTRE_MA37K", "", "", "", ["OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_32Rnd_762x51_Mag_Tracer"], [], ""]]];			//this line determines rifles -- Example: ["arifle_MX_F", "arifle_MX_pointer_F"] -- Array, can contain multiple assets 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["carbines", [["OPTRE_M392_DMR", "", "", "OPTRE_M392_Scope", ["OPTRE_15Rnd_762x51_Mag", "OPTRE_15Rnd_762x51_Mag_Tracer_Yellow","OPTRE_15Rnd_762x51_Mag_Tracer"], [], ""]]];			//this line determines rifles -- Example: ["arifle_MX_F", "arifle_MX_pointer_F"] -- Array, can contain multiple assets 					//this line determines carbines -- Example: ["arifle_MXC_F", "arifle_MXC_Holo_F"] -- Array, can contain multiple assets
 
 _militiaLoadoutData set ["grenadeLaunchers", [
 ["OPTRE_M319N", "", "", "", ["M319_HEAT_Grenade_Shell", "M319_HEDP_Grenade_Shell"], [], ""],
@@ -429,11 +415,31 @@ _militiaLoadoutData set ["grenadeLaunchers", [
 
 _militiaLoadoutData set ["Shotguns", [["OPTRE_M90A", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""]]];
 _militiaLoadoutData set ["SMGs", [["OPTRE_M7", "", "", "", ["OPTRE_48Rnd_5x23mm_Mag_tracer"], [], ""]]];
-_militiaLoadoutData set ["machineGuns", [["OPTRE_HMG38_Rifle", "", "", "OPTRE_HMG38_CarryHandle", ["OPTRE_40Rnd_30x06_Mag_Tracer", "OPTRE_40Rnd_30x06_Mag"], [], ""]]]; 				//this line determines machine guns -- Example: ["arifle_MX_SW_F", "arifle_MX_SW_Hamr_pointer_F"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["machineGuns", [["OPTRE_HMG38_Rifle", "", "", "OPTRE_BMR_Scope", ["OPTRE_40Rnd_30x06_Mag_Tracer", "OPTRE_40Rnd_30x06_Mag"], [], ""]]]; 				//this line determines machine guns -- Example: ["arifle_MX_SW_F", "arifle_MX_SW_Hamr_pointer_F"] -- Array, can contain multiple assets
 _militiaLoadoutData set ["marksmanRifles", [["OPTRE_SRM77_S2_Blue", "", "", "OPTRE_SRM_Sight", ["OPTRE_5Rnd_127x99_Subsonic", "OPTRE_5Rnd_127x99_Subsonic_noTracer"], [], "bipod_01_F_blk"]]]; 			//this line determines markman rifles -- Example: ["arifle_MXM_F", "arifle_MXM_Hamr_pointer_F"] -- Array, can contain multiple assets
 _militiaLoadoutData set ["sniperRifles", [["OPTRE_SRM77_S1_Blue", "", "", "OPTRE_SRM_Sight", ["OPTRE_5Rnd_127x99", "OPTRE_5Rnd_127x99_noTracer"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
 _militiaLoadoutData set ["sidearms", [["OPTRE_M7_Folded", "", "", "", ["OPTRE_48Rnd_5x23mm_JHP_Mag", "OPTRE_48Rnd_5x23mm_FMJ_Mag"], [], ""]]];
 
+//weird hacky fix becuase these units werent spawning with misc and radios
+_militialoadoutData set ["maps", ["ItemMap"]];				//this line determines map
+_militialoadoutData set ["watches", ["ItemWatch"]];		//this line determines watch
+_militialoadoutData set ["compasses", ["ItemCompass"]];	//this line determines compass
+_militialoadoutData set ["radios", ["ItemRadio"]];			//this line determines radio
+_militialoadoutData set ["gpses", ["ItemGPS"]];			//this line determines GPS
+_militialoadoutData set ["NVGs", ["OPTRE_NVG"]];						//this line determines NVGs -- Array, can contain multiple assets
+_militialoadoutData set ["binoculars", ["OPTRE_Binoculars","OPTRE_Smartfinder"]];
+_militialoadoutData set ["rangefinders", ["OPTRE_Smartfinder_Vector"]];
+
+//Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
+_militialoadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
+_militialoadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];
+_militialoadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies];
+_militialoadoutData set ["items_miscEssentials", [] call A3A_fnc_itemset_miscEssentials];
+
+//Unit type specific item sets. Add or remove these, depending on the unit types in use.
+_militialoadoutData set ["items_medic_extras", ["OPTRE_MedKit","OPTRE_Biofoam"]];
+_militialoadoutData set ["items_explosivesExpert_extras", ["ToolKit", "MineDetector"]];
+_militialoadoutData set ["items_engineer_extras", ["ToolKit", "MineDetector"]];
 
 ///////////////////////////////
 //    Police Loadout Data    //
@@ -452,11 +458,6 @@ _policeLoadoutData set ["SMGs", [
 ["OPTRE_M6D_Carbine_Black_F", "OPTRE_M6D_Carbine_Brake", "OPTRE_M6D_Carbine_Vis_Red", "OPTRE_M393_EOTECH", ["OPTRE_60Rnd_5x23mm_Mag", "OPTRE_26Rnd_127x40_Mag_Black_Tracer"], [], ""]]];
 
 _policeLoadoutData set ["Shotguns", [["OPTRE_M45ATAC", "", "", "", ["OPTRE_12Rnd_8Gauge_Pellets", "OPTRE_12Rnd_8Gauge_Slugs"], [], ""]]];
-
-/*_policeLoadoutData set ["RiotShields", [
-["OPTRE_M6C_Riot_Shield_Urban", "", "", "", ["OPTRE_8Rnd_127x40_AP_Mag", "OPTRE_8Rnd_127x40_Mag"], [], "OPTRE_Riot_Shield_Icon_UNSC"],
-["OPTRE_M7_Riot_Shield_Urban", "", "", "", ["OPTRE_60Rnd_5x23mm_Mag_tracer", "OPTRE_60Rnd_5x23mm_Mag_tracer_yellow"], [], "OPTRE_Riot_Shield_Icon_UNSC"]]];
-not sure these work well enough to keep in */
 
 _policeLoadoutData set ["sidearms", [["OPTRE_M6G", "", "", "", ["OPTRE_8Rnd_127x40_AP_Mag", "OPTRE_8Rnd_127x40_Mag"], [], ""]]];
 
@@ -1167,7 +1168,7 @@ private _sfsniperTemplate = {
 ////////////////////
 
 private _MilitiaSquadLeaderTemplate = {
-	[["helmets"] call _fnc_fallback] call _fnc_setHelmet;
+	[["Helmets","Hats"] call _fnc_fallback] call _fnc_setHelmet;
 	["Facewear"] call _fnc_setFacewear;
 	[["Vests"] call _fnc_fallback] call _fnc_setVest;
 	[["slUniforms", "uniforms"] call _fnc_fallback] call _fnc_setUniform;
@@ -1198,7 +1199,7 @@ private _MilitiaSquadLeaderTemplate = {
 };
 
 private _MilitiaRiflemanTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1250,7 +1251,7 @@ private _MilitiaMedicTemplate = {
 };
 
 private _MilitiaGrenadierTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	[["glVests", "Vests"] call _fnc_fallback] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1338,7 +1339,7 @@ private _MilitiaEngineerTemplate = {
 };
 
 private _MilitialatTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1395,7 +1396,7 @@ private _MilitiaMachineGunnerTemplate = {
 };
 
 private _MilitiaMarksmanTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1422,7 +1423,7 @@ private _MilitiaMarksmanTemplate = {
 };
 
 private _MilitiaSniperTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1454,7 +1455,7 @@ private _MilitiaSniperTemplate = {
 ///////////////////
 
 private _policeTemplate = {
-	["helmets"] call _fnc_setHelmet;
+	["Helmets"] call _fnc_setHelmet;
 	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
@@ -1648,8 +1649,8 @@ private _prefix = "militia";
 private _unitTypes = [
 	["SquadLeader", _MilitiaSquadLeaderTemplate],
 	["Rifleman", _MilitiaRiflemanTemplate],
-	["Medic", _MedicTemplate, [["medic", true]]],
-	["Engineer", _EngineerTemplate, [["engineer", true]]],
+	["Medic", _MilitiaMedicTemplate, [["medic", true]]],
+	["Engineer", _MilitiaEngineerTemplate, [["engineer", true]]],
 	["ExplosivesExpert", _MilitiaExplosivesExpertTemplate, [["explosiveSpecialist", true]]],
 	["Grenadier", _MilitiaGrenadierTemplate],
 	["LAT", _MilitialatTemplate],

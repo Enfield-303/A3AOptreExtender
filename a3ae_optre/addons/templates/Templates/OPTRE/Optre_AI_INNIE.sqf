@@ -46,7 +46,7 @@
 
 ["vehiclesAPCs", ["OPTRE_M412_IFV_INS"]] call _fnc_saveToTemplate;                  // armed with enclosed turret, armoured, with 6-8 passengers
 ["vehiclesIFVs", ["OPTRE_M494_INS"]] call _fnc_saveToTemplate;                  // capable of surviving multiple rockets, cannon armed, with 6-8 passengers
-["vehiclesLightTanks", ["OPTRE_M413_MGS_INS"]] call _fnc_saveToTemplate;
+["vehiclesLightTanks", ["OPTRE_M413_MGS_INS","OPTRE_M700_Viper_UNSC_CERed"]] call _fnc_saveToTemplate;
 ["vehiclesTanks", ["OPTRE_M808B_INS","a3ae_optre_Futura"]] call _fnc_saveToTemplate;
 ["vehiclesAA", ["OPTRE_M12R_AA_ins"]] call _fnc_saveToTemplate;                    // ideally heavily armed with anti-ground capability and enclosed turret. Passengers will be ignored
 
@@ -63,7 +63,7 @@
 ["vehiclesHelisTransport", ["OPTRE_Pelican_unarmed_ins"]] call _fnc_saveToTemplate;
 // Should be capable of dealing damage to ground targets without additional scripting
 ["vehiclesHelisLightAttack", ["OPTRE_INS_UH_144S_Falcon_DAP"]] call _fnc_saveToTemplate;      // Utility helis with fixed or door guns + rocket pods
-["vehiclesHelisAttack", ["OPTRE_ins_falcon","OPTRE_Pelican_armed_70mm_ins"]] call _fnc_saveToTemplate;           // Proper attack helis: Apache, Hind etc
+["vehiclesHelisAttack", ["OPTRE_ins_falcon"]] call _fnc_saveToTemplate;           // Proper attack helis: Apache, Hind etc
 
 ["vehiclesArtillery", ["OPTRE_m1015_mule_mlr_ins"]] call _fnc_saveToTemplate;
 ["magazines", createHashMapFromArray []] call _fnc_saveToTemplate; //element format: [Vehicle class, [Magazines]]
@@ -72,8 +72,8 @@
 ["uavsPortable", []] call _fnc_saveToTemplate;
 
 //Config special vehicles
-["vehiclesMilitiaLightArmed", ["OPTRE_M12_LRV_ins","OPTRE_M12_ins_APC"]] call _fnc_saveToTemplate;
-["vehiclesMilitiaTrucks", []] call _fnc_saveToTemplate;
+["vehiclesMilitiaLightArmed", ["OPTRE_M12_LRV_ins","O_G_Offroad_01_armed_F"]] call _fnc_saveToTemplate;
+["vehiclesMilitiaTrucks", ["OPTRE_M12_ins_APC"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaCars", ["OPTRE_M12_FAV_ins"]] call _fnc_saveToTemplate;
 
 ["vehiclesPolice", ["O_G_Offroad_01_armed_F","a3a_Offroad_02_LMG_black_F","O_G_Van_01_transport_F"]] call _fnc_saveToTemplate;
@@ -324,7 +324,7 @@ _sfloadoutData set ["marksmanRifles", [
 ]; 			//this line determines markman rifles -- Example: ["arifle_MXM_F", "arifle_MXM_Hamr_pointer_F"] -- Array, can contain multiple assets
 
 _sfloadoutData set ["sniperRifles", [["OPTRE_SRM77_S2", "", "", "OPTRE_SRM_Sight", ["OPTRE_10Rnd_127x99_noTracer", "OPTRE_10Rnd_127x99"], [], ""],
-["OPTRE_SRS99D", "", "", "OPTRE_SRS99_Scope", ["OOPTRE_4Rnd_145x114_APFSDS_Mag_D", "OPTRE_4Rnd_145x114_HVAP_Mag_D"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
+["OPTRE_SRS99D", "", "", "OPTRE_SRS99_Scope", ["OPTRE_4Rnd_145x114_APFSDS_Mag_D", "OPTRE_4Rnd_145x114_HVAP_Mag_D"], [], ""]]]; 				//this line determines sniper rifles -- Example: ["srifle_LRR_camo_F", "srifle_LRR_camo_SOS_F"] -- Array, can contain multiple assets
 _sfloadoutData set ["lightATLaunchers", [["launch_NLAW_F"],
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_HEDP", "a3ae_optre_MAMRAM_Therm"], [], ""], 
 ["a3ae_optre_MAMRAM", "", "", "", ["a3ae_optre_MAMRAM_Therm", "a3ae_optre_MAMRAM_HEDP"], [], ""],
@@ -780,7 +780,6 @@ private _sniperTemplate = {
 
 private _sfsquadLeaderTemplate = {
 	[["slHat", "helmets"] call _fnc_fallback] call _fnc_setHelmet;
-	["slFacewear"] call _fnc_setFacewear;
 	[["slVests", "Vests"] call _fnc_fallback] call _fnc_setVest;
 	[["slUniforms", "uniforms"] call _fnc_fallback] call _fnc_setUniform;
 
@@ -811,7 +810,6 @@ private _sfsquadLeaderTemplate = {
 
 private _sfriflemanTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 
@@ -837,7 +835,6 @@ private _sfriflemanTemplate = {
 
 private _sfmedicTemplate = {
 	["medHelmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	[["medVests"] call _fnc_fallback] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["medBackpacks"] call _fnc_setBackpack;
@@ -863,7 +860,6 @@ private _sfmedicTemplate = {
 
 private _sfgrenadierTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	[["glVests", "Vests"] call _fnc_fallback] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 
@@ -889,7 +885,6 @@ private _sfgrenadierTemplate = {
 
 private _sfexplosivesExpertTemplate = {
 	["engHelmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	[["engVests"] call _fnc_fallback] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["engBackpacks"] call _fnc_setBackpack;
@@ -922,7 +917,6 @@ private _sfexplosivesExpertTemplate = {
 
 private _sfengineerTemplate = {
 	["engHelmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["engVests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["engBackpacks"] call _fnc_setBackpack;
@@ -951,7 +945,6 @@ private _sfengineerTemplate = {
 
 private _sflatTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["atBackpacks"] call _fnc_setBackpack;
@@ -981,7 +974,6 @@ private _sflatTemplate = {
 
 private _sfatTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["atBackpacks"] call _fnc_setBackpack;
@@ -1011,7 +1003,6 @@ private _sfatTemplate = {
 
 private _sfaaTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["Vests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 	["atBackpacks"] call _fnc_setBackpack;
@@ -1041,7 +1032,6 @@ private _sfaaTemplate = {
 
 private _sfmarksmanTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["sniVests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 
@@ -1068,7 +1058,6 @@ private _sfmarksmanTemplate = {
 
 private _sfsniperTemplate = {
 	["helmets"] call _fnc_setHelmet;
-	["facewear"] call _fnc_setFacewear;
 	["sniVests"] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
 
@@ -1531,14 +1520,6 @@ private _unitTypes = [
 ];
 
 [_prefix, _unitTypes, _sfLoadoutData] call _fnc_generateAndSaveUnitsToTemplate;
-
-/*{
-	params ["_name", "_loadoutTemplate"];
-	private _loadouts = [_sfLoadoutData, _loadoutTemplate] call _fnc_buildLoadouts;
-	private _finalName = _prefix + _name;
-	[_finalName, _loadouts] call _fnc_saveToTemplate;
-} forEach _unitTypes;
-*/
 
 ///////////////////////
 //  Military Units   //

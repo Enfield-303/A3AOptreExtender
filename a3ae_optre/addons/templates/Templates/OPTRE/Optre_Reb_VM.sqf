@@ -4,7 +4,7 @@
 
 #include "Optre_Reb_Vehicle_attributes.sqf"
 
-["name", "Venezian Movement"] call _fnc_saveToTemplate;                         //this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
+["name", "VM"] call _fnc_saveToTemplate;                         //this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
 
 ["flag", "Flag_CSAT_F"] call _fnc_saveToTemplate;                         //this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
 ["flagTexture", "A3\Data_F\Flags\Flag_red_CO.paa"] call _fnc_saveToTemplate;                 //this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
@@ -12,7 +12,7 @@
 
 ["vehiclesBasic", ["OPTRE_M274_ATV_Ins"]] call _fnc_saveToTemplate;             //this line determines basic vehicles, the lightest kind available. -- Example: ["vehiclesBasic", ["B_Quadbike_01_F"]] -- String, can only use one
 ["vehiclesLightUnarmed", ["OPTRE_M813_TT"]] call _fnc_saveToTemplate;         //this line determines light and unarmed vehicles. -- Example: ["vehiclesLightUnarmed", ["B_MRAP_01_F"]] -- String, can only use one
-["vehiclesLightArmed", ["OPTRE_M12_ins_APC"]] call _fnc_saveToTemplate;         //this line determines light and armed vehicles -- Example: ["vehiclesLightArmed",["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F"]] -- String, can only use one
+["vehiclesLightArmed", ["OPTRE_M12_LRV_ins"]] call _fnc_saveToTemplate;         //this line determines light and armed vehicles -- Example: ["vehiclesLightArmed",["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F"]] -- String, can only use one
 ["vehiclesTruck", ["OPTRE_m1015_mule_ins"]] call _fnc_saveToTemplate;             //this line determines the trucks -- Example: ["vehiclesTrucks", ["B_Truck_01_transport_F","B_Truck_01_covered_F"]] -- String, can only use one
 ["vehiclesAT", ["OPTRE_M12_TD_ins"]] call _fnc_saveToTemplate;         //this line determines AT vehicle -- Example: ["vehiclesCargoTrucks", ["B_Truck_01_transport_F","B_Truck_01_covered_F"]] -- String, can only use one
 ["vehiclesAA", ["OPTRE_M12_LRV_ins"]] call _fnc_saveToTemplate;         //this line determines AA vehicle -- Example: ["vehiclesCargoTrucks", ["B_Truck_01_transport_F","B_Truck_01_covered_F"]] -- String, can only use one
@@ -23,7 +23,7 @@
 "OPTRE_Genet_IND",
 "OPTRE_M12_CIV2_IND",
 "OPTRE_forklift_IND",
-"OPTRE_RCHog"]] call _fnc_saveToTemplate;
+"OPTRE_Cryopod"]] call _fnc_saveToTemplate;
 
 ["vehiclesCivTruck", ["C_Truck_02_transport_F"]] call _fnc_saveToTemplate;
 
@@ -40,16 +40,16 @@
 ["staticAT", ["OPTRE_Static_FG75"]] call _fnc_saveToTemplate;                     //this line determinesstatic ATs -- Example: ["staticAT", ["B_static_AT_F"]] -- String, can only use one
 ["staticAA", ["OPTRE_Static_M41_Ins"]] call _fnc_saveToTemplate;                     //this line determines static AAs -- Example: ["staticAA", ["B_static_AA_F"]] -- String, can only use one
 ["staticMortars", ["OPTRE_AU_44_INS_Mortar"]] call _fnc_saveToTemplate;                 //this line determines static mortars -- Example: ["staticMortar", ["B_Mortar_01_F"]] -- String, can only use one
-["staticMortarMagHE", "OPTRE_10Rnd_122mm_81mm_Mo_shells"] call _fnc_saveToTemplate;
+["staticMortarMagHE", "OPTRE_10Rnd_122mm_SABOT_81mm_Mo_shells"] call _fnc_saveToTemplate;
 ["staticMortarMagSmoke", "OPTRE_10Rnd_122mm_Mo_Smoke_white"] call _fnc_saveToTemplate;
 
 
 //empty for the time being
 ["vehiclesCivHeli", []] call _fnc_saveToTemplate;
 ["vehiclesCivBoat", []] call _fnc_saveToTemplate;
-["vehiclesCivPlane", []] call _fnc_saveToTemplate;
+["vehiclesCivPlane", ["C_Plane_Civil_01_racing_F"]] call _fnc_saveToTemplate;
 ["vehiclesCivSupply", []] call _fnc_saveToTemplate;
-["vehiclesPlane", []] call _fnc_saveToTemplate;
+["vehiclesPlane", ["C_Plane_Civil_01_racing_F"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", []] call _fnc_saveToTemplate;
 
 ["mineAT", "ATMine"] call _fnc_saveToTemplate;                 //this line determines AT mines needed for spawning in minefields -- Example: ["minefieldAT", ["ATMine_Range_Mag"]] -- String, can only use one
@@ -64,18 +64,17 @@
 ///////////////////////////
 
 private _initialRebelEquipment = [
-"OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope","OPTRE_M6G_Flashlight",
-"optre_hgun_comet_F","4Rnd_454Casull",
+"OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope","OPTRE_M6G_Flashlight","a3ae_optre_SG1","50Rnd_570x28_SMG_03","OPTRE_M393S_DMR","OPTRE_15Rnd_762x51_Mag_Tracer",
 "OPTRE_M319s","OPTRE_signalSmokeP","OPTRE_signalSmokeG","OPTRE_signalSmokeR","OPTRE_signalSmokeB","OPTRE_signalSmokeY","OPTRE_signalSmokeO",
 "a3ae_optre_MAMRAM","a3ae_optre_MAMRAM_HEDP",
 "launch_NLAW_F",
-"OPTRE_h_PatrolCap_Green", "OPTRE_h_PatrolCap_Brown", "OPTRE_UNSC_Dress_Hat", "OPTRE_CMA_Beret", "OPTRE_h_Booniehat_Grey", "H_MilCap_blue", "H_PASGT_basic_blue_press_F", "H_PASGT_basic_blue_F",
-"V_Press_F","V_BandollierB_oli","V_BandollierB_khk","V_BandollierB_rgr","V_BandollierB_cbr","V_BandollierB_blk","V_Rangemaster_belt",
-"OPTRE_ONI_Researcher_Suitcase",
+"OPTRE_h_PatrolCap_Green", "OPTRE_h_PatrolCap_Brown", "OPTRE_UNSC_Dress_Hat", "OPTRE_CMA_Beret", "OPTRE_h_Booniehat_Grey", "H_MilCap_blue", "H_PASGT_basic_blue_F",
+"V_BandollierB_oli","V_BandollierB_khk","V_BandollierB_rgr","V_BandollierB_cbr","V_BandollierB_blk","V_Rangemaster_belt",
+"OPTRE_ONI_Researcher_Suitcase","B_AssaultPack_sgg","B_AssaultPack_Kerry","B_AssaultPack_rgr","B_AssaultPack_blk",
 "OPTRE_Glasses_Cigar","OPTRE_Glasses_Cigarette","OPTRE_EyePiece","OPTRE_HUD_blk_Glasses","OPTRE_HUD_b_Glasses","OPTRE_HUD_g_Glasses","OPTRE_HUD_Glasses","OPTRE_HUD_p_Glasses","OPTRE_HUD_r_Glasses","OPTRE_HUD_w_Glasses",
-"OPTRE_ANPRC_521_URF",
-["M41_IED_Remote_Mag", 10], ["M41_IED_B_Remote_Mag", 10], ["M41_IED_C_Remote_Mag", 3],"MiniGrenade",
-"OPTRE_Medigel","OPTRE_Biofoam","OPTRE_MedKit"
+"OPTRE_ANPRC_521_URF","OPTRE_Binoculars",
+["M41_IED_Remote_Mag", 10], ["M41_IED_B_Remote_Mag", 10], ["M41_IED_C_Remote_Mag", 3],"MiniGrenade","SmokeShellPurple","SmokeShell",
+"OPTRE_Medigel"
 ];
 
 
@@ -93,13 +92,20 @@ private _rebUniforms = [
     "OPTRE_Ins_ER_uniform_GAtan",
     "OPTRE_Ins_ER_uniform_GGod",
     "OPTRE_Ins_ER_uniform_GGgrey",
-    "OPTRE_Ins_ER_jacket_od_surplus",
     "OPTRE_Ins_ER_rolled_surplus_crimson",
     "OPTRE_Ins_ER_rolled_surplus_black",
     "OPTRE_Ins_ER_rolled_OD_crimson",
     "OPTRE_Ins_ER_rolled_OD_blknred",
     "OPTRE_Ins_ER_rolled_OD_blknblu",
-    "OPTRE_Ins_ER_rolled_jean_orca"
+    "OPTRE_Ins_ER_rolled_jean_orca",
+    "OPTRE_DME_Uniform",
+    "OPTRE_DME_Temperate_Uniform",
+    "OPTRE_UNSC_Army_Uniform_DESWDL",
+    "OPTRE_UNSC_Army_Uniform_T_SNO",
+    "OPTRE_UNSC_Marine_Uniform_T",
+    "OPTRE_UNSC_Army_Uniform_T_TRO",
+    "OPTRE_UNSC_Army_Uniform_S_WDLDES_SlimLeg",
+    "OPTRE_UNSC_Army_Uniform_T_URB"
 ];
 
 private _dlcUniforms = [

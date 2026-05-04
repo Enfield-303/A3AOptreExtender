@@ -1,4 +1,4 @@
-#include "..\script_component.hpp"
+
 //asval, Mk17 and SCAR-H arguable
 
 private _categoryOverrideTable = [
@@ -503,6 +503,61 @@ private _categoryOverrideTable = [
 ["sfp_flashlight", ["Unknown", "Weapons"]],
 ["sfp_imgint_1010", ["Unknown", "Weapons"]],
 
+//East Asia War
+["EAW_Type30", ["Melee","Weapons"]],
+["EAW_Type95", ["Melee","Weapons"]],
+["EAW_Dao", ["Melee","Weapons"]],
+["EAW_Hanyang_Bayonet", ["Melee","Weapons"]],
+
+["EAW_Type11_Base",["MachineGuns","Weapons"]],
+["EAW_Type96",["MachineGuns","Weapons"]],
+["EAW_Type99",["MachineGuns","Weapons"]],
+["EAW_FN30_Base",["MachineGuns","Weapons"]],
+["EAW_ZB26_Base",["MachineGuns","Weapons"]],
+
+["EAW_C96_Carbine",["SMGs","Weapons"]],
+["EAW_C96_Auto_Carbine",["SMGs","Weapons"]],
+["EAW_MP28",["SMGs","Weapons"]],
+
+["EAW_Type97_Sniper",["SniperRifles","Weapons"]],
+["EAW_Type97_Sniper_Stock2",["SniperRifles","Weapons"]],
+
+//WebKnight Melee
+["Pipe_aluminium", ["Melee","Weapons"]],
+["WBK_axe", ["Melee","Weapons"]],
+["Bat_Clear", ["Melee","Weapons"]],
+["Bat_Spike", ["Melee","Weapons"]],
+["WBK_BrassKnuckles", ["Melee","Weapons"]],
+["WBK_brush_axe", ["Melee","Weapons"]],
+["WBK_craftedAxe", ["Melee","Weapons"]],
+["Crowbar", ["Melee","Weapons"]],
+["CrudeAxe", ["Melee","Weapons"]],
+["FireAxe", ["Melee","Weapons"]],
+["WBK_survival_weapon_1", ["Melee","Weapons"]],
+["WBK_survival_weapon_2", ["Melee","Weapons"]],
+["IceAxe", ["Melee","Weapons"]],
+["WBK_Katana", ["Melee","Weapons"]],
+["Weap_melee_knife", ["Melee","Weapons"]],
+["Knife_kukri", ["Melee","Weapons"]],
+["Knife_m3", ["Melee","Weapons"]],
+["WBK_pipeStyledSword", ["Melee","Weapons"]],
+["Police_Bat", ["Melee","Weapons"]],
+["Rod", ["Melee","Weapons"]],
+["Sashka_Russian", ["Melee","Weapons"]],
+["Shovel_Russian", ["Melee","Weapons"]],
+["Shovel_Russian_Rotated", ["Melee","Weapons"]],
+["Axe", ["Melee","Weapons"]],
+["WBK_SmallHammer", ["Melee","Weapons"]],
+["WBK_ww1_Club", ["Melee","Weapons"]],
+["UNSC_Knife", ["Melee","Weapons"]],
+["UNSC_Knife_reversed", ["Melee","Weapons"]],
+["WBK_survival_weapon_4", ["Melee","Weapons"]],
+["WBK_survival_weapon_4_r", ["Melee","Weapons"]],
+["WBK_survival_weapon_3", ["Melee","Weapons"]],
+["WBK_survival_weapon_3_r", ["Melee","Weapons"]],
+
+
+
 // OPTRE
 ["OPTRE_M247H_Shield_Etilka", ["Unknown","Weapons"]],
 ["OPTRE_CSW_M247T_Weapon", ["StaticWeaponParts","items"]],
@@ -513,9 +568,7 @@ private _categoryOverrideTable = [
 ["OPTRE_CSW_AU44_Mortar_Carry", ["StaticWeaponParts","items"]],
 ["OPTRE_M6GGNR", ["MissileLaunchers","Weapons","AT"]]
 
-
 ];
-
 
 //Create a local namespace.
 A3A_categoryOverrides = false call A3A_fnc_createNamespace;
@@ -539,4 +592,3 @@ A3A_specialGrenadeLaunchers = createHashMap;
 	A3A_specialGrenadeLaunchers set [_class, [_baseWeapon, _muzzle]];
 
 } forEach (_categoryOverrideTable select { "GrenadeLaunchers" in _x#1 });
-

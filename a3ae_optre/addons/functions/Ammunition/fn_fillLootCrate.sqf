@@ -1,9 +1,11 @@
 #include "..\script_component.hpp"
 private _preventSpawningTheseMags = [
-	"OPTRE_7Rnd_20mm_HEDP_Mag",
+	"OPTRE_7Rnd_20mm_APFSDS_Mag",
 	"OPTRE_M739_SAW_HE_72rnd_Drum",
 	"OPTRE_M739_SAW_Shredder_72rnd_Drum",
-	"OPTRE_200Rnd_127x99_M247H_Etilka"
+	"OPTRE_200Rnd_127x99_M247H_Etilka",
+	"OPTRE_4Rnd_145x114_APFSDS_Mag",
+	"OPTRE_4Rnd_145x114_APFSDS_Mag_D"
 
 ];
 private _preventSpawningTheseVests = [
@@ -524,11 +526,7 @@ private _preventSpawningTheseBackpacks = [
 	"OPTRE_M247A1_Low_Bag_Weapon_Innie",
 	"OPTRE_M247A1_Low_Bag_Weapon",
 	"OPTRE_M247T_Tripod_Spartan_bag",
-	"OPTRE_M247T_Tripod_bag",
-	"",
-	"",
-	"",
-	"",
+	"OPTRE_M247T_Tripod_bag"
 ];
 
 FIX_LINE_NUMBERS()

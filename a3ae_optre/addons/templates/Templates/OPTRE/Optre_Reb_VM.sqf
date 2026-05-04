@@ -10,6 +10,7 @@
 ["flagTexture", "A3\Data_F\Flags\Flag_red_CO.paa"] call _fnc_saveToTemplate;                 //this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
 ["flagMarkerType", "flag_CSAT"] call _fnc_saveToTemplate;             //this line determines the flag marker type -- Example: ["flagMarkerType", "flag_NATO"] - ENTER ONLY ONE OPTION
 
+
 ["vehiclesBasic", ["OPTRE_M274_ATV_Ins"]] call _fnc_saveToTemplate;             //this line determines basic vehicles, the lightest kind available. -- Example: ["vehiclesBasic", ["B_Quadbike_01_F"]] -- String, can only use one
 ["vehiclesLightUnarmed", ["OPTRE_M813_TT"]] call _fnc_saveToTemplate;         //this line determines light and unarmed vehicles. -- Example: ["vehiclesLightUnarmed", ["B_MRAP_01_F"]] -- String, can only use one
 ["vehiclesLightArmed", ["OPTRE_M12_LRV_ins"]] call _fnc_saveToTemplate;         //this line determines light and armed vehicles -- Example: ["vehiclesLightArmed",["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F"]] -- String, can only use one
@@ -44,13 +45,10 @@
 ["staticMortarMagSmoke", "OPTRE_10Rnd_122mm_Mo_Smoke_white"] call _fnc_saveToTemplate;
 
 
-//empty for the time being
-["vehiclesCivHeli", []] call _fnc_saveToTemplate;
-["vehiclesCivBoat", []] call _fnc_saveToTemplate;
+["vehiclesCivHeli", ["OPTRE_UNSC_falcon_medical"]] call _fnc_saveToTemplate;
+["vehiclesCivBoat", ["optre_catfish_unarmed_f_Civ"]] call _fnc_saveToTemplate;
 ["vehiclesCivPlane", ["C_Plane_Civil_01_racing_F"]] call _fnc_saveToTemplate;
-["vehiclesCivSupply", []] call _fnc_saveToTemplate;
 ["vehiclesPlane", ["C_Plane_Civil_01_racing_F"]] call _fnc_saveToTemplate;
-["vehiclesMedical", []] call _fnc_saveToTemplate;
 
 ["mineAT", "ATMine"] call _fnc_saveToTemplate;                 //this line determines AT mines needed for spawning in minefields -- Example: ["minefieldAT", ["ATMine_Range_Mag"]] -- String, can only use one
 ["mineAPERS", "APERSMine"] call _fnc_saveToTemplate;             //this line determines APERS mines needed for spawning in minefields -- Example: ["minefieldAPERS", ["APERSMine_Range_Mag"]] -- String, can only use one
@@ -64,7 +62,7 @@
 ///////////////////////////
 
 private _initialRebelEquipment = [
-"OPTRE_M6G","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Scope","OPTRE_M6G_Flashlight","a3ae_optre_SG1","50Rnd_570x28_SMG_03","OPTRE_M393S_DMR","OPTRE_15Rnd_762x51_Mag_Tracer",
+"OPTRE_M6B","OPTRE_12Rnd_127x40_Mag_Tracer","OPTRE_M6G_Vis_Red_Laser","a3ae_optre_SG1","50Rnd_570x28_SMG_03","OPTRE_M393S_DMR","OPTRE_15Rnd_762x51_Mag_Tracer",
 "OPTRE_M319s","OPTRE_signalSmokeP","OPTRE_signalSmokeG","OPTRE_signalSmokeR","OPTRE_signalSmokeB","OPTRE_signalSmokeY","OPTRE_signalSmokeO",
 "a3ae_optre_MAMRAM","a3ae_optre_MAMRAM_HEDP",
 "launch_NLAW_F",
@@ -99,13 +97,13 @@ private _rebUniforms = [
     "OPTRE_Ins_ER_rolled_OD_blknblu",
     "OPTRE_Ins_ER_rolled_jean_orca",
     "OPTRE_DME_Uniform",
-    "OPTRE_DME_Temperate_Uniform",
-    "OPTRE_UNSC_Army_Uniform_DESWDL",
-    "OPTRE_UNSC_Army_Uniform_T_SNO",
-    "OPTRE_UNSC_Marine_Uniform_T",
-    "OPTRE_UNSC_Army_Uniform_T_TRO",
+    "OPTRE_UNSC_Army_Uniform_T_DES_SlimLeg",
+    "OPTRE_UNSC_Army_Uniform_T_SNO_SlimLeg",
+    "OPTRE_UNSC_Marine_Uniform_T2_SlimLeg",
+    "OPTRE_UNSC_Army_Uniform_T_TRO_SlimLeg",
     "OPTRE_UNSC_Army_Uniform_S_WDLDES_SlimLeg",
-    "OPTRE_UNSC_Army_Uniform_T_URB"
+    "OPTRE_UNSC_Army_Uniform_T3_BLK_SlimLeg",
+    "OPTRE_UNSC_Army_Uniform_T_URB_SlimLeg"
 ];
 
 private _dlcUniforms = [
@@ -122,15 +120,6 @@ private _dlcUniforms = [
 
 if ("expansion" in A3A_enabledDLC) then {
     _dlcUniforms append [
-        "U_I_C_Soldier_Bandit_4_F",
-        "U_I_C_Soldier_Bandit_1_F",
-        "U_I_C_Soldier_Bandit_5_F",
-        "U_I_C_Soldier_Para_2_F",
-        "U_I_C_Soldier_Para_3_F",
-        "U_I_C_Soldier_Para_5_F",
-        "U_I_C_Soldier_Para_4_F",
-        "U_I_C_Soldier_Para_1_F",
-        "U_I_C_Soldier_Camo_F"
     ];
 };
 

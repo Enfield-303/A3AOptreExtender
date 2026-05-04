@@ -8,19 +8,55 @@ class Templates {
         priority = 16;
     };
 
-    class Optre_UNSC : OPTRE_Base
+    //UNSC TEMPLATES
+
+    class Optre_UNSC_Temperate : OPTRE_Base
     {
         basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
         side = "Occ"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
         logo = QPATHTOFOLDER(x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_unsc_ca.paa);
         flagTexture = "x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_unsc_ca.paa"; //path to an icon to be displayed in the selector
         name = "OPTRE UNSC"; //the name shown in the selector
-        file = "Optre_AI_UNSC"; //the template file name
-        maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
+        file = "Optre_AI_UNSC_Temperate"; //the template file name
+        climate[] = {"temperate"};
         description = "United Nations Space Command";
     };
 
-    class Optre_VM : OPTRE_Base
+    class Optre_UNSC_Arid : Optre_UNSC_Temperate
+    {
+        name = "OPTRE Arid UNSC"; //the name shown in the selector
+        file = "Optre_AI_UNSC_Arid"; //the template file name
+        climate[] = {"arid"};
+        description = "United Nations Space Command - Hot Climates";
+    };
+
+    //INSURECTIONIST TEMPLATES
+
+    class Optre_INNIE_Temperate: OPTRE_Base
+    {
+        basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
+        side = "Inv"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
+        logo = QPATHTOFOLDER(x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_insurrection_ca.paa);
+        flagTexture = "x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_insurrection_ca.paa"; //path to an icon to be displayed in the selector
+        name = "OPTRE Insurrection"; //the name shown in the selector
+        file = "Optre_AI_INNIE_Temperate"; //the template file name
+        climate[] = {"temperate"};
+        
+        description = "Insurrectionist Forces";
+    };
+
+    class Optre_INNIE_Arid: Optre_INNIE_Temperate
+    {
+
+        name = "OPTRE Arid Insurrection"; //the name shown in the selector
+        file = "Optre_AI_INNIE_Arid"; //the template file name
+        climate[] = {"arid"};
+        description = "Insurrectionist Forces - Deathworlders"
+    };
+
+    //REBEL TEMPLATES
+
+    class Optre_VM_Temperate : OPTRE_Base
     {
         basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
         side = "Reb"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
@@ -32,17 +68,7 @@ class Templates {
         description = "Venezian Movement";
     };
 
-    class Optre_INNIE: OPTRE_Base
-    {
-        basepath = QPATHTOFOLDER(Templates\OPTRE); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
-        side = "Inv"; //the side the faction defaults to, one of the following: Inv, Occ, Reb, Civ
-        logo = QPATHTOFOLDER(x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_insurrection_ca.paa);
-        flagTexture = "x\a3ae_optre\addons\Templates\Templates\OPTRE\images\flag_insurrection_ca.paa"; //path to an icon to be displayed in the selector
-        name = "OPTRE Insurrection"; //the name shown in the selector
-        file = "Optre_AI_INNIE"; //the template file name
-        maps[] = {}; //if this template should be prioritized on any maps (case sensetive to worldName)
-        description = "Insurrectionist Forces";
-    };
+    //CIVILIAN TEMPLATES
 
     class Optre_Civ: OPTRE_Base
     {

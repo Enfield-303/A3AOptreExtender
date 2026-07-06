@@ -7,4 +7,3 @@ logistic and cargo nodes
 cas and cap loadouts
 custom (renamed) weapons to fit the theme
 
-hello tiny and bromancho
